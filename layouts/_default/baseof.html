@@ -14,6 +14,7 @@
     {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" />
 
+    {{- partial "header-scripts.html" $ -}}
 </head>
 <body class="{{ block "body_class" . }} {{ end }}">
 
