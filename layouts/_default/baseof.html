@@ -32,6 +32,8 @@
                     {{ if .Site.Params.linkedinName }}<a href="https://www.linkedin.com/in/{{ .Site.Params.linkedinName }}/" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
                 </nav>
             </div>
+
+        {{- partial "footer-scripts.html" $ -}}
         </footer>
 
     </div>
